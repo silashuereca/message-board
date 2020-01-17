@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <!-- looping through messages array in route index.js -->
+    <% for(let message of messages) { %>
+      <div class="message-container">
+        <h3><%= message.user %></h3>
+        <p><%= message.text %></p>
+        <p><%= message.added %></p>
+      </div>
+    <%}%>
+
+    <a href="/new" style="margin-left: 30px">New Message</a>
+  </body>
+</html>
